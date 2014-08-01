@@ -1,0 +1,8 @@
+require 'yaml'
+
+io = YAML.load(File.open("YML_importer.yml"))
+puts io
+array = io.split.collect do |m|
+        m = m.to_i
+      end
+
