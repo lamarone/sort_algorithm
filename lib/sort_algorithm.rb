@@ -2,6 +2,8 @@ require "sort_algorithm/version"
 
 module SortAlgorithm
 
+  require 'sort_algorithm/business/command_parameter'
+
   require 'sort_algorithm/algorithm/algo'
   require 'sort_algorithm/algorithm/bubble'
   require 'sort_algorithm/algorithm/quick'
