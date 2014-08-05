@@ -1,15 +1,14 @@
 module Business
   class Service
 
-    def initialize(importer, algorithm)
-      @importer = importer
-      @algorithm = algorithm
+    def initialize(algorithm, importer, exporter)
+      @algorithm, @importer, @exporter = algorithm, importer, exporter
     end
 
-    def run(string_data)
-      row_data = @importer.import_data(string_data)
+    def run
+      row_data = @importer.get
       sorted_data = @algorithm.sort(row_data)
-      Format::Exporter.new.export_data(sorted_data)
+      @exporter.export_data(sorted_data)
     end
   end
 end

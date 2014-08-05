@@ -1,11 +1,19 @@
 module Business
   class ServiceBuilder
-    def self.build_with_command_format(algorithm)
-      Service.new(Format::ImporterWithCommand.new, algorithm)
-    end
+    ALGORITHMS = {
+        bubble: Algorithm::Bubble.new,
+        quick: Algorithm::Quick.new
+    }.freeze
+    IMPORTERS = {
+        yml: Format::YMLImporter,
+        command: Format::CommandLineImporter
+    }.freeze
 
-    def self.build_with_yml_format(algorithm)
-      Service.new(Format::ImporterWithYml.new, algorithm)
+    # @param [Business::CommandParameter] parameter
+    def self.build(parameter)
+      Service.new(ALGORITHMS[parameter.algorithm],
+                  IMPORTERS[parameter.format].new(parameter.data),
+                  Format::Exporter.new)
     end
   end
 end
