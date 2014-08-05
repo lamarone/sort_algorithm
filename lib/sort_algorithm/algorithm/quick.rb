@@ -13,17 +13,17 @@ module Algorithm
       i = left
       j = right
       val = row_data[i]
-      if j - i + 1 > 1 then
+      if j - i + 1 > 1
         while i < j do
           while i < j do
-            if row_data[j] < val then
+            if row_data[j] < val
               row_data[i] = row_data[j]
               break
             end
             j = j - 1
           end
           while i < j do
-            if row_data[i] > val then
+            if row_data[i] > val
               row_data[j] = row_data[i]
               break
             end
@@ -34,7 +34,7 @@ module Algorithm
         quick_sort(row_data,left,i)
         quick_sort(row_data,i+1,right)
       end
-      return row_data
+      row_data
     end
   end
 end

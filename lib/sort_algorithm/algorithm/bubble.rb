@@ -10,7 +10,6 @@ module Algorithm
         end
       end
       sorted_data = sorting_data
-      return sorted_data
     end
   end
 end

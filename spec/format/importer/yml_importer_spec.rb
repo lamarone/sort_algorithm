@@ -13,5 +13,4 @@ describe Format::YMLImporter do
       end
     end
   end
-
 end

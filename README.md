@@ -19,10 +19,11 @@ Or install it yourself as:
 ## Usage
 
 TODO: cd in and run following command in the command line:
-       $ ruby bin/run.rb "bubble_command" "4 3 2 1"
+       $ ruby bin/run.rb "algorithm" "format" "4 3 2 1"
         
-       "bubble_command" can be replaced by "bubble_yml","quick_command" and "quick_yml" ,which depends on the algorithm you want to use or the method which you import the data.
-       "4 3 2 1" is the data you want to import through command line.However,you can also use "" to replace it when you use yml file to import the data. 
+       "algorithm" can be replaced by "bubble" and "quick" ,which depends on the algorithm you want to use.
+       "format" can be replaced by "command" or "yml", depends on the method which you import the data.
+       "4 3 2 1" is the data you want to import through command line.However,when format is yml, you can not fill this parameter.
         
     
 

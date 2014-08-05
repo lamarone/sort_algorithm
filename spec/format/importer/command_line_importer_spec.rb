@@ -22,7 +22,7 @@ describe Format::CommandLineImporter do
     end
 
     context 'when item is 100' do
-      it "string_data after importing should be relevant to the string_data itself but in array farmat " do
+      it "string_data after importing should be relevant to the string_data itself but in array format " do
         string_data = ""
         import_data = []
         100.times{
