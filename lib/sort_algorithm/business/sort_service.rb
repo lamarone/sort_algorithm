@@ -1,5 +1,5 @@
 module Business
-  class Service
+  class SortService
 
     def initialize(algorithm, importer, exporter)
       @algorithm, @importer, @exporter = algorithm, importer, exporter

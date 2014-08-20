@@ -7,7 +7,7 @@ module Format
 
     def get
       print "import data with command\n"
-      @row_data.split.collect do |m|
+      @row_data.split(',').collect do |m|
         m.to_i
       end
     end

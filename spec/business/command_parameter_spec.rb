@@ -17,7 +17,7 @@ module Business
       end
 
       it 'should get data from argv.' do
-        CommandParameter.new(@argv).data.should == '4 3 2 1'
+        CommandParameter.new(@argv).data1.should == '4 3 2 1'
       end
     end
   end

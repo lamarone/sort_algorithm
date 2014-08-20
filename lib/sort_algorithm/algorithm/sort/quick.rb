@@ -1,7 +1,7 @@
 module Algorithm
   class Quick < Algo
     def sort(row_data)
-      print "\nquick sort:"
+      print "quick sort:"
       left = 0
       right = row_data.length - 1
       print "\n row_data: \n",row_data,"\n"
