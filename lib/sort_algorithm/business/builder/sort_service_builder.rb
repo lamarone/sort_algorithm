@@ -4,15 +4,10 @@ module Business
         bubble: Algorithm::Bubble.new,
         quick: Algorithm::Quick.new
     }.freeze
-    IMPORTERS = {
-        yml: Format::YMLImporter,
-        command: Format::CommandLineImporter,
-    }.freeze
 
-    # @param [Business::CommandParameter] parameter
-    def self.build(parameter)
-      SortService.new(ALGORITHMS[parameter.algorithm],
-                  IMPORTERS[parameter.format].new(parameter.data1),
+    def self.build(argument)
+      SortService.new(ALGORITHMS[argument.algorithm],
+                  argument.rowdata,
                   Format::SortExporter.new)
     end
   end

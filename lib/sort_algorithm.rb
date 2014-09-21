@@ -2,8 +2,6 @@ require "sort_algorithm/version"
 
 module SortAlgorithm
 
-  require 'sort_algorithm/business/command_parameter'
-
   require 'sort_algorithm/algorithm/sort/algo'
   require 'sort_algorithm/algorithm/sort/bubble'
   require 'sort_algorithm/algorithm/sort/quick'
@@ -17,17 +15,14 @@ module SortAlgorithm
   require 'sort_algorithm/business/sort_service'
   require 'sort_algorithm/business/interactive_service'
   require 'sort_algorithm/business/builder/interactive_builder'
+  require 'sort_algorithm/command/command_argument'
   require 'sort_algorithm/command/command_translate'
   require 'sort_algorithm/command/command_handler'
   require 'sort_algorithm/command/sort_command'
   require 'sort_algorithm/command/search_command'
+  require 'sort_algorithm/command/help_command'
   require 'sort_algorithm/business/search_service'
   require 'sort_algorithm/format/exporter/search_exporter'
-
-
-
-
-
 
 
 

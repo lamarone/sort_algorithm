@@ -1,8 +1,7 @@
 module Command
   class SortCommand
     def execute(argument)
-      parameter = Business::CommandParameter.new(argument)
-      Business::SortServiceBuilder.build(parameter).run
+      Business::SortServiceBuilder.build(argument).run
     end
   end
 end

@@ -1,8 +1,7 @@
 module Algorithm
   class Bubble < Algo
     def sort(row_data)
-      print "bubble sort:"
-      print "\n row_data: \n",row_data,"\n"
+      print "bubble sort:\n"
       sorting_data = row_data
       (0..sorting_data.length - 2).each do |i|
         (0..sorting_data.length - 1 - i - 1).each do |j|

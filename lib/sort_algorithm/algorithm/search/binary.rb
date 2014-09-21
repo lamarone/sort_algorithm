@@ -1,6 +1,7 @@
 module Algorithm
   class Binary
     def search(row_data, target)
+      print "binary search:\nsearch target : #{target}\n"
       low = 0
       high = row_data.length - 1
       while low <= high
@@ -8,7 +9,7 @@ module Algorithm
         if row_data[mid] == target
           return mid + 1
         end
-        if target <row_data[mid]
+        if target < row_data[mid]
           high = mid - 1
         else
           low = mid + 1

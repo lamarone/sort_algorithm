@@ -6,7 +6,6 @@ module Format
         p position
       else
         print "cannot find!\n"
-        position
       end
     end
   end

@@ -8,11 +8,19 @@ module Format
     end
 
     def get
-      row_data = YAML.load(File.open(@file_path))
+      string_data = YAML.load(File.open(@file_path))
       print "import data with YML\n"
-      row_data.split.collect do |m|
+      row_data = convert_to_i(string_data)
+      print "row data : #{row_data}\n"
+      row_data
+    end
+
+    private
+    def convert_to_i(string_data)
+      string_data.split.collect do |m|
         m.to_i
       end
     end
   end
+
 end

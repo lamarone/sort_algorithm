@@ -7,9 +7,10 @@ module Business
     def run
       @importer.each do |command_line|
         begin
+          break if command_line == 'quit'
           argument = Command::CommandHandler.new.handle(command_line)
         rescue => e
-          puts e.message
+          print "the command \"#{command_line}\" is not supported\n"
         end
       end
     end

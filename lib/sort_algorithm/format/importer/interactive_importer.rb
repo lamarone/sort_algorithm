@@ -2,7 +2,7 @@ module Format
   class InteractiveImporter
     def each
       while true do
-        print " cmd >> "
+        print 'cmd >> '
         yield gets.chomp
       end
     end

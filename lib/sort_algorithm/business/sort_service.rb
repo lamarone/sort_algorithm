@@ -1,13 +1,12 @@
 module Business
   class SortService
 
-    def initialize(algorithm, importer, exporter)
-      @algorithm, @importer, @exporter = algorithm, importer, exporter
+    def initialize(algorithm, row_data, exporter)
+      @algorithm, @row_data, @exporter = algorithm, row_data, exporter
     end
 
     def run
-      row_data = @importer.get
-      sorted_data = @algorithm.sort(row_data)
+      sorted_data = @algorithm.sort(@row_data)
       @exporter.export_data(sorted_data)
     end
   end

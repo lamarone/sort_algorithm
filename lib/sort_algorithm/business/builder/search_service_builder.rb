@@ -3,17 +3,14 @@ module Business
     ALGORITHMS = {
         binary: Algorithm::Binary.new,
     }.freeze
-    IMPORTERS = {
-        yml: Format::YMLImporter,
-        command: Format::CommandLineImporter,
-    }.freeze
+
 
     # @param [Business::CommandParameter] parameter
-    def self.build(parameter)
-      SearchService.new(ALGORITHMS[parameter.algorithm],
-                        IMPORTERS[parameter.format].new(parameter.data1),
+    def self.build(argument)
+      SearchService.new(ALGORITHMS[argument.algorithm],
+                        argument.rowdata,
                         Format::SearchExporter.new,
-                        parameter.data2)
+                       argument.target)
     end
   end
 end
